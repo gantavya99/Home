@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: rgb(80, 82, 82);
+    font-family: 'Times New Roman', Times, serif;
+}
