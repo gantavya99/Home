@@ -115,7 +115,7 @@ const Home = () => {
               <img
                 src={ny}
                 alt="New York Image"
-                className="rounded-3xl h-32 w-[160px] ml-14 absolute lg:ml-4 lg:h-20 lg:w-[120px] lg:rounded-xl"
+                className="rounded-3xl h-32 w-[160px] ml-10 absolute lg:ml-4 lg:h-20 lg:w-[120px] lg:rounded-xl"
               />
               <button className="bg-[#ff2d55] px-4 py-1 left-36 top-10 rounded-md text-white border-none text-md relative lg:left-24 lg:top-5 lg:text-xs lg:px-2 ">
                 Live
