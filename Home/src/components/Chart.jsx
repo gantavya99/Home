@@ -76,15 +76,16 @@ export default class Charts extends PureComponent {
             type="monotone"
             dataKey="uv"
             stackId="1"
-            stroke="#FF8900"
-            fill="#FF8900"
+            stroke="#FFd9b1"
+            fill="#FFD9B1"
+            FFD9B1
           />
           <Area
             type="monotone"
             dataKey="pv"
             stackId="1"
-            stroke="#FFD9B1"
-            fill="#FFD9B1"
+            stroke="#FF8900"
+            fill="#FF8900"
           />
         </AreaChart>
       </ResponsiveContainer>
