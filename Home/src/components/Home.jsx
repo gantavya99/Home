@@ -9,22 +9,8 @@ import { BsClouds } from "react-icons/bs";
 import Card from "./Card";
 import Additional from "./Additional";
 import Chart from "./Chart";
-const Home = () => {
-  function printCount() {
-    let a = [];
-    for (let i = 0; i < 100000; i++) {
-      a[i] = i * i;
-    }
-    return function (index) {
-      console.log(a[index]);
-    };
-  }
-  useEffect(() => {
-    console.time("6");
-    let closure = printCount();
-    closure(6);
-    console.timeEnd("6");
-  }, []);
+const Home = ({clouds,pressure,humidity,wind}) => {
+
 
   const [show, setShow] = useState(false);
   const months = [
@@ -108,7 +94,7 @@ const Home = () => {
               </h2>
               <div className="flex items-center">
                 <BsClouds color="#057bff" className="mt-3 mr-2 lg:text-sm lg:mt-1" />
-                <h2 className="mt-3 font-semibold text-[#057bff] lg:text-xs lg:mt-1">Cloudy</h2>
+                <h2 className="mt-3 font-semibold text-[#057bff] lg:text-xs lg:mt-1">{clouds}</h2>
               </div>
             </div>
             <div className="flex items-center">
@@ -117,13 +103,13 @@ const Home = () => {
                 alt="New York Image"
                 className="rounded-3xl h-32 w-[160px] ml-10 absolute lg:ml-4 lg:h-20 lg:w-[120px] lg:rounded-xl"
               />
-              <button className="bg-[#ff2d55] px-4 py-1 left-36 top-10 rounded-md text-white border-none text-md relative lg:left-24 lg:top-5 lg:text-xs lg:px-2 ">
+              <button className="bg-[#ff2d55] px-4 py-1 left-32 top-10 rounded-md text-white border-none text-md relative lg:left-24 lg:top-5 lg:text-xs lg:px-2 ">
                 Live
               </button>
             </div>
           </div>
           <Card />
-          <Additional />
+          <Additional Pressure={pressure} Humidity={humidity} Wind={wind} />
           <Chart />
         </div>
       )}
