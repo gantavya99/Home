@@ -97,7 +97,7 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="ml-5 mt-10 flex lg:mt-0 lg:ml-7">
+          <div className="ml-5 mt- flex lg:mt-0 lg:ml-7">
             <div>
               <h1 className="text-black font-semibold text-3xl lg:text-lg">New York,</h1>
               <h1 className="text-black font-semibold text-3xl lg:text-lg">
