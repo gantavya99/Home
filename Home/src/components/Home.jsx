@@ -9,9 +9,7 @@ import { BsClouds } from "react-icons/bs";
 import Card from "./Card";
 import Additional from "./Additional";
 import Chart from "./Chart";
-const Home = ({clouds,pressure,humidity,wind}) => {
-
-
+const Home = ({ clouds, pressure, humidity, wind }) => {
   const [show, setShow] = useState(false);
   const months = [
     "Jan",
@@ -61,8 +59,12 @@ const Home = ({clouds,pressure,humidity,wind}) => {
               <button className="ml-2">Current Location</button>
             </div>
 
-            <h1 className="text-white font-semibold text-6xl lg:text-3xl lg:mb-3">New York,</h1>
-            <h1 className="text-white font-semibold text-6xl lg:text-3xl">United States</h1>
+            <h1 className="text-white font-semibold text-6xl lg:text-3xl lg:mb-3">
+              New York,
+            </h1>
+            <h1 className="text-white font-semibold text-6xl lg:text-3xl">
+              United States
+            </h1>
           </div>
         </div>
       )}
@@ -85,7 +87,9 @@ const Home = ({clouds,pressure,humidity,wind}) => {
           </div>
           <div className="ml-5 mt- flex lg:mt-0 lg:ml-7">
             <div>
-              <h1 className="text-black font-semibold text-3xl lg:text-lg">New York,</h1>
+              <h1 className="text-black font-semibold text-3xl lg:text-lg">
+                New York,
+              </h1>
               <h1 className="text-black font-semibold text-3xl lg:text-lg">
                 United States
               </h1>
@@ -93,8 +97,13 @@ const Home = ({clouds,pressure,humidity,wind}) => {
                 {formattedDate}
               </h2>
               <div className="flex items-center">
-                <BsClouds color="#057bff" className="mt-3 mr-2 lg:text-sm lg:mt-1" />
-                <h2 className="mt-3 font-semibold text-[#057bff] lg:text-xs lg:mt-1">{clouds}</h2>
+                <BsClouds
+                  color="#057bff"
+                  className="mt-3 mr-2 lg:text-sm lg:mt-1"
+                />
+                <h2 className="mt-3 font-semibold text-[#057bff] lg:text-xs lg:mt-1">
+                  {clouds}
+                </h2>
               </div>
             </div>
             <div className="flex items-center">

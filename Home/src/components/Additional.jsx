@@ -22,7 +22,7 @@ const Additional = ({Pressure, Humidity, Wind}) => {
         </div>
       </div>
     </div>
-    <h3 className="text-sm ml-6 mt-1 text-[#003339] font-semibold">Temperature</h3>
+    <h3 className="text-lg ml-6 mt-1 text-[#003339] font-semibold lg:text-sm">Temperature</h3>
     </div>
   );
 };

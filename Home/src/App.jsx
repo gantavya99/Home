@@ -26,15 +26,15 @@ function App() {
 
   useEffect(() => {
     if (weatherData !== null) {
-      console.log(weatherData);
-      console.log(weatherData.list[0].main.temp);
+      // console.log(weatherData);
+      // console.log(weatherData.list[0].main.temp);
       setClouds(weatherData.list[0].weather[0].description);
       setPressure(weatherData.list[0].main.pressure);
       setWind(weatherData.list[0].wind.speed);
       setHumidity(weatherData.list[0].main.humidity);
-      console.log(wind)
-      console.log("humidity:",humidity)
-      console.log(pressure);
+      // console.log(wind)
+      // console.log("humidity:",humidity)
+      // console.log(pressure);
     }
   }, [weatherData]);
 

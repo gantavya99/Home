@@ -1,63 +1,62 @@
 import React, { PureComponent } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import {
   AreaChart,
   Area,
-  XAxis,
-  YAxis,
-  CartesianGrid,
   Tooltip,
   ResponsiveContainer,
+  Label,
 } from "recharts";
 
 const data = [
   {
     name: "Page A",
-    uv: 4000,
-    pv: 2400,
+    temp: 5,
+    prevMonth: 2,
     amt: 2400,
   },
   {
     name: "Page B",
-    uv: 3000,
-    pv: 1398,
+    temp: 6,
+    prevMonth: 6,
     amt: 2210,
   },
   {
     name: "Page C",
-    uv: 2000,
-    pv: 9800,
+    temp: 8,
+    prevMonth: 10,
     amt: 2290,
   },
   {
     name: "Page D",
-    uv: 2780,
-    pv: 3908,
+    temp: 3,
+    prevMonth: 12,
     amt: 2000,
   },
   {
     name: "Page E",
-    uv: 1890,
-    pv: 4800,
+    temp: 4,
+    prevMonth: 5,
     amt: 2181,
   },
   {
     name: "Page F",
-    uv: 2390,
-    pv: 3800,
+    temp: 8,
+    prevMonth: 8,
     amt: 2500,
   },
   {
     name: "Page G",
-    uv: 3490,
-    pv: 4300,
+    temp: 4,
+    prevMonth: 8,
     amt: 2100,
   },
 ];
 
-export default class Charts extends PureComponent {
-  static demoUrl = "https://codesandbox.io/s/stacked-area-chart-ix341";
+export default function Charts(){
+ 
 
-  render() {
     return (
       <ResponsiveContainer width="100%" height="25%">
         <AreaChart
@@ -70,25 +69,28 @@ export default class Charts extends PureComponent {
             left: 0,
             bottom: 0,
           }}
+          
         >
           <Tooltip />
+         
           <Area
             type="monotone"
-            dataKey="uv"
+            dataKey="temp"
             stackId="1"
             stroke="#FFd9b1"
             fill="#FFD9B1"
-            FFD9B1
+            
           />
           <Area
             type="monotone"
-            dataKey="pv"
+            dataKey="prevMonth"
             stackId="1"
             stroke="#FF8900"
             fill="#FF8900"
+            
           />
         </AreaChart>
       </ResponsiveContainer>
     );
   }
-}
+
